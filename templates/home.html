@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Ishank's APP
+{% endblock title %}
+
+{% block body %}
+
+<div class="head m-3">
+  <h2>Sentiment Analysis Application</h2>
+  <br>
+  <hr>
+</div>
+
+<div class="main">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        Get Sentiment Analysis on Your Image
+      </div>
+      <div class="card-body">
+        Fill Your name and upload any Image of humans to get Sentiment analysis on faces of image. The predictions made by this application is only accurate to 70%. Try it out for Fun and after uploading image scroll down to see prediction.
+        <br>
+        <form action="" class ="form-group" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <label>Name</label>
+          <input type="text" class="form-control" name="name",required>
+          <label>Select Image</label>
+          <input type="file" class="form-control" accept="image/*" name="img" required>
+          <br>
+          <hr>
+          <input type="submit" id="sb" class="btn btn-dark" value="Submit">
+          </form>
+      </div>
+      <div class="card-footer">
+        <p><i>Developed and Maintain by Ishank Chopra</i><p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="row m-2 p-2">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="img-responsive">
+      <img src="{{ f.img.url }}" class="img-fluid" >
+    </div>
+
+  </div>
+</div>
+
+{% endblock  %}
