@@ -26,7 +26,10 @@ SECRET_KEY = 's@57h9+an!_=my$4y8nry&*xtw18-l(6c!1i@pu5el)gn_1lym'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+CORS_ORIGIN_WHITELIST=[
+    'isuweb.herokuapp.com',
+    '127.0.0.1',
+]
 
 # Application definition
 
