@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 CORS_ORIGIN_WHITELIST=[
-    'isuweb.herokuapp.com',
+    'sentiment1424.herokuapp.com',
     '127.0.0.1',
 ]
 
